@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+body {
+  background: rgb(46, 63, 87);
+  background: linear-gradient(
+    90deg,
+    rgb(63, 86, 119) 0%,
+    rgba(33, 44, 61, 1) 42%,
+    rgb(15, 21, 29) 100%
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar-thumb {
+  background: #282828;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+/* reversed hover on Sign/Login buttons--- */
+.custom-button-sign:hover {
+  color: rgb(255, 255, 255) !important;
+  background-color: #1db954 !important;
+}
+.custom-button-login:hover {
+  color: rgb(0, 0, 0) !important;
+  background-color: #1db954 !important;
+  border-color: transparent !important;
+}
+/* --------------------------------------- */
+.sidebar-fixed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1100;
+}
+.icons {
+  color: #1db954a2; /* Icone verdi (trasparenza 45%) */
+}
+
+.nav-link:hover .icons {
+  color: #1db954 !important; /* Cambia il colore dell'icona al passaggio del mouse */
+}
+
+.nav-link:hover .icon-text {
+  color: white !important;
+}
+.main-content {
+  margin-left: 250px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 991.98px) {
+  .song-details {
+    padding-left: 0px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.custom-player-buttons {
+  color: #999999;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-player-buttons:hover {
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-progress-bar {
+  background-color: #414141;
+  height: 3px;
+  width: 250px !important;
+}
+
+.main-links {
+  color: white !important;
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.3;
+  text-decoration: none;
+}
+
+.main-links:hover {
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.card-track-details {
+  line-height: 13px;
+  font-size: 13px;
+}
+
+.card-hover {
+  cursor: pointer;
+}
+/* .custom-card {
+  border: 0 !important; /*
+  transition: border-color 0.3s ease-in-out; 
+} */
+.custom-card:hover {
+  border-color: #1db954e4;
+}
+
+.card-hover:hover {
+  background-color: rgba(0, 0, 0, 0.431) !important;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+}
+
+.track-duration {
+  font-size: 13px;
+  margin-top: -5px;
 }
